@@ -7,6 +7,8 @@ import rootReducer from "./store/reducers";
 import GlobalStyle from "./Styles/GlobalStyles";
 import { ThemeProvider } from "styled-components";
 import theme from "./Styles/theme";
+import "slick-carousel/slick/slick.scss";
+import "./Styles/_slick-theme.scss";
 
 const store = createStore(rootReducer);
 

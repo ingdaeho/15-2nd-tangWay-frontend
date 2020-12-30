@@ -1,19 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function Header() {
+  const [category, setCategory] = useState([]);
+  useEffect(() => {
+    fetch("/config/header.json")
+      .then((res) => res.json())
+      .then((res) => setCategory(res));
+  }, []);
+
   return (
     <HeaderWrap>
       <div className="headerInner">
         <img src="./images/logo.png" alt="logo" />
         <div>
           <ul>
-            {Menu?.map((el, idx) => (
-              <List key={idx} id={el.id}>
-                <Link to={el.src}>{el.title}</Link>
-              </List>
-            ))}
+            {category.menu &&
+              category.menu.map((menu, idx) => {
+                return (
+                  <List key={idx} id={menu.id}>
+                    <Link to={menu.src}>{menu.title}</Link>
+                  </List>
+                );
+              })}
           </ul>
         </div>
         <UtilWrap>
@@ -35,14 +45,33 @@ function Header() {
 export default Header;
 
 const HeaderWrap = styled.section`
-  background-color: green;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 85px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+  &:hover {
+    background-color: white;
+    a {
+      color: black;
+    }
+    div {
+      span {
+        color: black;
+      }
+      img {
+        filter: invert(0);
+      }
+    }
+  }
 
   .headerInner {
     ${({ theme }) => theme.flexSB}
     align-items: center;
     width: 1280px;
     height: 85px;
-    margin: 0 auto;
 
     img {
       width: 200px;
@@ -95,36 +124,3 @@ const UtilWrap = styled.div`
     }
   }
 `;
-
-const Menu = [
-  {
-    id: 1,
-    title: "항공권 예매",
-    src: "/Booking",
-  },
-  {
-    id: 2,
-    title: "나의 예약",
-    src: "/#",
-  },
-  {
-    id: 3,
-    title: "서비스 안내",
-    src: "/#",
-  },
-  {
-    id: 4,
-    title: "좌석 선택",
-    src: "/#",
-  },
-  {
-    id: 5,
-    title: "이벤트",
-    src: "/#",
-  },
-  {
-    id: 6,
-    title: "고객센터",
-    src: "/#",
-  },
-];

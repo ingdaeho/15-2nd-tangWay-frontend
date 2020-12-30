@@ -11,12 +11,16 @@ const flexSB = css`
   justify-content: space-between;
 `;
 
+const Color = {
+  fontcolorwhite: "#ffffff",
+  fontcolorblack: "#1b1b1b",
+  fontcolorlightgray: "#f5f5f5",
+  maincolorred: "#d22c26",
+  backgroundgray: "#eaeaea",
+};
+
 const theme = {
-  fontColorWhite: "#ffffff",
-  fontColorBlack: "#1b1b1b",
-  fontColorLightgray: "#f5f5f5",
-  mainColorRed: "#d22c26",
-  backGroundGray: "#eaeaea",
+  Color,
   flexcenter,
   flexSB,
 };

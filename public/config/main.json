@@ -1,0 +1,336 @@
+{
+  "Services": [
+    {
+      "id": 0,
+      "img": "https://www.flaticon.com/svg/static/icons/svg/3656/3656900.svg",
+      "title": "부가서비스번들"
+    },
+    {
+      "id": 1,
+      "img": "https://www.flaticon.com/svg/static/icons/svg/3656/3656900.svg",
+      "title": "수하물 추가구매"
+    },
+    {
+      "id": 2,
+      "img": "https://www.flaticon.com/svg/static/icons/svg/3656/3656900.svg",
+      "title": "프리미엄 좌석구매"
+    },
+    {
+      "id": 3,
+      "img": "https://www.flaticon.com/svg/static/icons/svg/3656/3656900.svg",
+      "title": "기내식 사전주문"
+    },
+    {
+      "id": 4,
+      "img": "https://www.flaticon.com/svg/static/icons/svg/3656/3656900.svg",
+      "title": "면세품 &shop"
+    },
+    {
+      "id": 5,
+      "img": "https://www.flaticon.com/svg/static/icons/svg/3656/3656900.svg",
+      "title": "원클릭여행자보험"
+    }
+  ],
+  "RecommendFlight": [
+    {
+      "id": 0,
+      "image": "https://images.unsplash.com/photo-1607727536244-b3ab855fb209?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "depart": "김포",
+      "arrive": "제주",
+      "price": "11111.00",
+      "date": "2021-01-14T20:00:00Z"
+    },
+    {
+      "id": 1,
+      "image": "https://images.unsplash.com/photo-1607727536244-b3ab855fb209?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "depart": "서울",
+      "arrive": "부산",
+      "price": "222222",
+      "date": "12.31"
+    },
+    {
+      "id": 2,
+      "image": "https://images.unsplash.com/photo-1607727536244-b3ab855fb209?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "depart": "광주",
+      "arrive": "제주",
+      "price": "3333",
+      "date": "12.30"
+    },
+    {
+      "id": 3,
+      "image": "",
+      "depart": "김포",
+      "arrive": "서울",
+      "price": "44444",
+      "date": "1.12"
+    },
+    {
+      "id": 4,
+      "image": "",
+      "depart": "김포",
+      "arrive": "제주",
+      "price": "5555",
+      "date": "1.1"
+    },
+    {
+      "id": 5,
+      "image": "",
+      "depart": "부산",
+      "arrive": "제주",
+      "price": "66666",
+      "date": "1.2"
+    },
+    {
+      "id": 6,
+      "image": "",
+      "depart": "서울",
+      "arrive": "광주",
+      "price": "777777",
+      "date": "1.19"
+    },
+    {
+      "id": 7,
+      "image": "",
+      "depart": "부산",
+      "arrive": "제주",
+      "price": "8888",
+      "date": "1.7"
+    },
+    {
+      "id": 8,
+      "image": "",
+      "depart": "김포",
+      "arrive": "서울",
+      "price": "999999",
+      "date": "1.5"
+    },
+    {
+      "id": 9,
+      "image": "",
+      "depart": "서울",
+      "arrive": "제주",
+      "price": "1111",
+      "date": "1.12"
+    }
+  ],
+  "Notices": [
+    {
+      "id": 0,
+      "title": "인천-후쿠오카 복항 안내",
+      "date": "2020-11-24"
+    },
+    {
+      "id": 1,
+      "title": "국내선 신분증 미소지 승객 항공기 탑승불가 안내",
+      "date": "2020-11-11"
+    },
+    {
+      "id": 2,
+      "title": "COVID-19에 따른 일본 입국 서류 관련 안내(11/3 기준)",
+      "date": "2020-11-03"
+    }
+  ],
+  "area": [
+    {
+      "id": 0,
+      "title": "대한민국",
+      "destination": [
+        {
+          "id": 0,
+          "kor": "서울/인천",
+          "eng": "ICN"
+        },
+        {
+          "id": 1,
+          "kor": "서울/김포",
+          "eng": "GMP"
+        },
+        {
+          "id": 2,
+          "kor": "대구",
+          "eng": "TAE"
+        },
+        {
+          "id": 3,
+          "kor": "제주",
+          "eng": "CJU"
+        },
+        {
+          "id": 4,
+          "kor": "청주",
+          "eng": "CJJ"
+        },
+        {
+          "id": 5,
+          "kor": "부산",
+          "eng": "PUS"
+        },
+        {
+          "id": 6,
+          "kor": "양양",
+          "eng": "YNY"
+        },
+        {
+          "id": 7,
+          "kor": "광주",
+          "eng": "KWJ"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "일본",
+      "destination": [
+        {
+          "id": 0,
+          "kor": "서울/인천",
+          "eng": "ICN"
+        },
+        {
+          "id": 1,
+          "kor": "서울/김포",
+          "eng": "GMP"
+        },
+        {
+          "id": 2,
+          "kor": "대구",
+          "eng": "TAE"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "동북아시아",
+      "destination": [
+        {
+          "id": 0,
+          "kor": "서울/인천",
+          "eng": "ICN"
+        },
+        {
+          "id": 1,
+          "kor": "서울/김포",
+          "eng": "GMP"
+        },
+        {
+          "id": 2,
+          "kor": "대구",
+          "eng": "TAE"
+        },
+        {
+          "id": 3,
+          "kor": "제주",
+          "eng": "CJU"
+        },
+        {
+          "id": 4,
+          "kor": "청주",
+          "eng": "CJJ"
+        },
+        {
+          "id": 5,
+          "kor": "부산",
+          "eng": "PUS"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "동남아시아",
+      "destination": [
+        {
+          "id": 0,
+          "kor": "서울/인천",
+          "eng": "ICN"
+        },
+        {
+          "id": 1,
+          "kor": "서울/김포",
+          "eng": "GMP"
+        },
+        {
+          "id": 2,
+          "kor": "대구",
+          "eng": "TAE"
+        },
+        {
+          "id": 3,
+          "kor": "제주",
+          "eng": "CJU"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "러시아/중앙아시아",
+      "destination": [
+        {
+          "id": 0,
+          "kor": "서울/인천",
+          "eng": "ICN"
+        },
+        {
+          "id": 1,
+          "kor": "서울/김포",
+          "eng": "GMP"
+        },
+        {
+          "id": 2,
+          "kor": "대구",
+          "eng": "TAE"
+        },
+        {
+          "id": 3,
+          "kor": "제주",
+          "eng": "CJU"
+        },
+        {
+          "id": 4,
+          "kor": "청주",
+          "eng": "CJJ"
+        },
+        {
+          "id": 5,
+          "kor": "부산",
+          "eng": "PUS"
+        },
+        {
+          "id": 6,
+          "kor": "양양",
+          "eng": "YNY"
+        },
+        {
+          "id": 7,
+          "kor": "광주",
+          "eng": "KWJ"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "대양주/괌/사이판",
+      "destination": [
+        {
+          "id": 0,
+          "kor": "서울/인천",
+          "eng": "ICN"
+        },
+        {
+          "id": 1,
+          "kor": "서울/김포",
+          "eng": "GMP"
+        },
+        {
+          "id": 2,
+          "kor": "대구",
+          "eng": "TAE"
+        },
+        {
+          "id": 3,
+          "kor": "제주",
+          "eng": "CJU"
+        }
+      ]
+    }
+  ]
+}
