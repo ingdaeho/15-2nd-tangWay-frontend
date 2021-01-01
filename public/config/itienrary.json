@@ -1,0 +1,51 @@
+{
+  "itienrary": {
+    "section1": {
+      "service_section": {
+        "start": "구간1",
+        "depart_airport_english_name": "GMP",
+        "arrive_airport_english_name": "CJU",
+        "depart_airport_kor_name": "서울/김포",
+        "arrive_airport_kor_name": "제주"
+      },
+      "time": [
+        {
+          "id": 1,
+          "airplane": "TW701",
+          "depart_time": "06:40",
+          "arrive_time": "07:50",
+          "depart_airport_english_name": "GMP",
+          "arrive_airport_english_name": "CJU",
+          "price": "17,000"
+        },
+        {
+          "id": 2,
+          "airplane": "TW714",
+          "depart_time": "07:40",
+          "arrive_time": "10:50",
+          "depart_airport_english_name": "GMP",
+          "arrive_airport_english_name": "CJU",
+          "price": "25,000"
+        },
+        {
+          "id": 3,
+          "airplane": "TW708",
+          "depart_time": "11:30",
+          "arrive_time": "16:50",
+          "depart_airport_english_name": "GMP",
+          "arrive_airport_english_name": "CJU",
+          "price": "38,000"
+        },
+        {
+          "id": 4,
+          "airplane": "TW704",
+          "depart_time": "05:20",
+          "arrive_time": "10:30",
+          "depart_airport_english_name": "GMP",
+          "arrive_airport_english_name": "CJU",
+          "price": "50,000"
+        }
+      ]
+    }
+  }
+}
