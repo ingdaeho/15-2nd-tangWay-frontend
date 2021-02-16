@@ -7,7 +7,7 @@ function LocationLayer({ data, layer, setLayer, setOpenCalendar }) {
   const departure = useSelector((store) => store.bookingReducer.departure);
   const [activeID, setActiveID] = useState(0);
 
-  const changeHandler = (idx) => {
+  const activeIdHandler = (idx) => {
     setActiveID(idx);
   };
 
@@ -18,7 +18,7 @@ function LocationLayer({ data, layer, setLayer, setOpenCalendar }) {
         <ul>
           {data &&
             data.map((list, idx) => (
-              <li onClick={() => changeHandler(idx)} key={idx} id={list.id} className={idx === activeID ? "on" : ""}>
+              <li onClick={() => activeIdHandler(idx)} key={idx} id={list.id} className={idx === activeID ? "on" : ""}>
                 {list.name}
               </li>
             ))}

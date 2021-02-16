@@ -8,7 +8,7 @@ function Recommend({ listMode, setListMode }) {
   const [recommendSalesData, setRecommendSalesData] = useState([]);
 
   useEffect(() => {
-    fetch(`${API}/flight/flight_image`)
+    fetch(`${API}/flight/flight_image?limit=10`)
       .then((res) => res.json())
       .then((res) => setRecommendSalesData(res.FLIGHT));
   }, []);

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import ButtonBlock from "./Components/SignupBlock/ButtonBlock";
 import SignupBlock from "./Components/SignupBlock/SignupBlock";
+import Header from "../../Components/Header/Header";
 import "./Signup.scss";
 import { SignupApi } from "../../config";
 import SignupLayout from "./SignupLayout";
@@ -124,21 +125,24 @@ function SignUp() {
   };
 
   return (
-    <SignupLayout sendUserData={sendUserData}>
-      <form className="signUpInfoContainer">
-        <ul>
-          <SignupBlock handleChange={handleChange} checkEmailId={checkEmailId} userPw={userPw} checkPw={checkPw} />
-          <ButtonBlock
-            handleClick={handleClick}
-            makeBirthday={makeBirthday}
-            makeBigArr={makeBigArr}
-            maleClicked={maleClicked}
-            femaleClicked={femaleClicked}
-            checkEmailId={checkEmailId}
-          />
-        </ul>
-      </form>
-    </SignupLayout>
+    <>
+      <Header />
+      <SignupLayout sendUserData={sendUserData}>
+        <form className="signUpInfoContainer">
+          <ul>
+            <SignupBlock handleChange={handleChange} checkEmailId={checkEmailId} userPw={userPw} checkPw={checkPw} />
+            <ButtonBlock
+              handleClick={handleClick}
+              makeBirthday={makeBirthday}
+              makeBigArr={makeBigArr}
+              maleClicked={maleClicked}
+              femaleClicked={femaleClicked}
+              checkEmailId={checkEmailId}
+            />
+          </ul>
+        </form>
+      </SignupLayout>
+    </>
   );
 }
 
