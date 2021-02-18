@@ -1,4 +1,4 @@
-# ✈️TangWay
+# ✈️ TangWay
 ## 프로젝트 소개
 - [T'way Air](https://www.twayair.com/app/main) 사이트
 - 국내 항공사 T'way Air의 핵심 기능인 예매와 소셜 로그인을 구현하였습니다.
