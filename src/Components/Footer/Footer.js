@@ -50,8 +50,8 @@ function Footer() {
 export default Footer;
 
 const FooterLayout = styled.div`
-  border-top: 1px solid ${theme.backGroundGray};
-  ${theme.flexcenter}
+  border-top: 1px solid ${({ theme }) => theme.color.backGroundGray};
+  ${({ theme }) => theme.flex.center}
   flex-direction: column;
   height: 460px;
 `;
@@ -61,7 +61,7 @@ const FooterTop = styled.div`
   height: 70px;
   margin: 20px;
   padding: 20px;
-  ${theme.flexSB}
+  ${({ theme }) => theme.flex.SB}
 `;
 
 const SpanWrapper = styled.div`
@@ -85,9 +85,9 @@ const IconWrraper = styled.div`
 `;
 
 const RevCenter = styled.span`
-  border: 1px solid ${theme.backGroundGray};
+  border: 1px solid ${({ theme }) => theme.color.backGroundGray};
   border-radius: 20px;
-  background-color: ${theme.backGroundGray};
+  background-color: ${({ theme }) => theme.color.backGroundGray};
   text-align: center;
   font-size: 14px;
 `;
@@ -101,7 +101,7 @@ const PhoneNum = styled.span`
 const FooterMid = styled.div`
   width: 100%;
   height: 240px;
-  ${theme.flexcenter}
+  ${theme.flex.center}
   background-color: white;
 `;
 

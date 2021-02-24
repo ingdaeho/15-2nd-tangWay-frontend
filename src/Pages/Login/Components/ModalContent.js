@@ -30,7 +30,7 @@ export default function ModalContent({ setModalState }) {
                 key={idx}
                 name={el.name}
                 text={el.text}
-                onClick={el.name === "logoutBtn" ? () => logout() : console.log("구현중")}
+                onClick={el.name === "logoutBtn" ? () => logout() : console.log()}
               >
                 {el.text}
               </ModalButton>

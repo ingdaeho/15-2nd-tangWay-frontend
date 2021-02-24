@@ -37,7 +37,7 @@ export default Recommend;
 const RecommendFlight = styled.section`
   width: 100%;
   padding: 50px 0px;
-  background-color: ${({ theme }) => theme.Color.backgroundgray};
+  background-color: ${({ theme }) => theme.color.backGroundGray};
   text-align: center;
 
   .goodsHead {

@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setDeparture } from "../../../../store/actions";
 import styled from "styled-components";
 
-function RouteInput({ setLayer, setOpenCalendar, calendarReset, name }) {
+function RouteInput({ modalConditions, setModalConditions, calendarReset, name }) {
   const dispatch = useDispatch();
   const departure = useSelector((store) => store.bookingReducer.departure);
   const destination = useSelector((store) => store.bookingReducer.destination);
@@ -17,8 +17,7 @@ function RouteInput({ setLayer, setOpenCalendar, calendarReset, name }) {
           name === departure
             ? () => {
                 dispatch(setDeparture(""));
-                setLayer(true);
-                setOpenCalendar(false);
+                setModalConditions({ ...modalConditions, modalLayer: true, calendar: false });
                 calendarReset();
               }
             : null

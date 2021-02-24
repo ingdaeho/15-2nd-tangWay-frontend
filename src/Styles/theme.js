@@ -5,36 +5,35 @@ const selected = css`
   border-radius: 10px;
 `;
 
-const flexcenter = css`
+const center = css`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-const flexSB = css`
+const SB = css`
   display: flex;
   justify-content: space-between;
 `;
 
-const Color = {
-  fontcolorwhite: "#ffffff",
-  fontcolorblack: "#1b1b1b",
-  fontcolorlightgray: "#f5f5f5",
-  maincolorred: "#d22c26",
-  backgroundgray: "#eaeaea",
-  mainColorRed: "#d22c26",
+const flex = {
+  SB,
+  center,
+};
+
+const color = {
+  black: "#1b1b1b",
+  lightGray: "#f5f5f5",
+  mainRed: "#d22c26",
   backGroundGray: "#eaeaea",
-  fontColorWhite: "#ffffff",
+  white: "#ffffff",
+  selected,
 };
 
 const theme = {
-  Color,
-  flexcenter,
-  flexSB,
+  color,
+  flex,
   selected,
-  mainColorRed: "#d22c26",
-  backGroundGray: "#eaeaea",
-  fontColorWhite: "#ffffff",
 };
 
 export default theme;

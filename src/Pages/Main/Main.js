@@ -9,12 +9,14 @@ import { API } from "../../config";
 
 function Main() {
   const [data, setData] = useState([]);
-  const [modal, setModal] = useState(false);
-  const [layer, setLayer] = useState(false);
-  const [openCalendar, setOpenCalendar] = useState(false);
-  const [type, setType] = useState("oneWay");
   const [listMode, setListMode] = useState("Slide");
   const [focusedInput, setFocusedInput] = useState("startDate");
+  const [modalConditions, setModalConditions] = useState({
+    mainPageModal: false,
+    modalLayer: false,
+    calendar: false,
+    journeyType: "oneWay",
+  });
 
   useEffect(() => {
     fetch(`${API}/flight/country`)
@@ -25,24 +27,18 @@ function Main() {
   useEffect(() => {
     listMode === "Slide" ? setListMode("Slide") : setListMode("List");
   }, [listMode]);
-  console.log(data);
+
   return (
     <>
-      {modal && <OpenModal />}
+      {modalConditions.mainPageModal && <OpenModal />}
       <MainSection>
         <Header />
         <BookingModal
           data={data}
-          modal={modal}
-          setModal={setModal}
-          layer={layer}
-          setLayer={setLayer}
-          type={type}
-          setType={setType}
+          modalConditions={modalConditions}
+          setModalConditions={setModalConditions}
           focusedInput={focusedInput}
           setFocusedInput={setFocusedInput}
-          openCalendar={openCalendar}
-          setOpenCalendar={setOpenCalendar}
         />
       </MainSection>
       <Service />

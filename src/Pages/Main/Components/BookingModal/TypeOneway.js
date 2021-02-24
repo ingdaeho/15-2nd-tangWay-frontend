@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-function TypeOneway({ openCalendar }) {
-  return <DateInput onClick={openCalendar} />;
+function TypeOneway({ modalConditions }) {
+  return <DateInput onClick={modalConditions.calendar} />;
 }
 
 export default TypeOneway;

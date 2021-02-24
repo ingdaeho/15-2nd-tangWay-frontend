@@ -10,19 +10,7 @@ import Calendar from "../Calendar";
 import Passenger from "./PassengerNum";
 import { setDeparture, setDestination, setStartDate, setEndDate } from "../../../../store/actions";
 
-function BookingModal({
-  data,
-  modal,
-  setModal,
-  layer,
-  setLayer,
-  type,
-  setType,
-  focusedInput,
-  setFocusedInput,
-  openCalendar,
-  setOpenCalendar,
-}) {
+function BookingModal({ data, modalConditions, setModalConditions, focusedInput, setFocusedInput }) {
   const history = useHistory();
   const dispatch = useDispatch();
   const departure = useSelector((store) => store.bookingReducer.departure);
@@ -38,35 +26,31 @@ function BookingModal({
   };
 
   return (
-    <MainBooking modal={modal} type={type}>
+    <MainBooking mainPageModal={modalConditions.mainPageModal} journeyType={modalConditions.journeyType}>
       <div>
         <SelectTypeWrap>
           <button
-            className={type === "oneWay" && "selectedButton"}
+            className={modalConditions.journeyType === "oneWay" && "selectedButton"}
             onClick={() => {
-              setModal(true);
-              setType("oneWay");
+              setModalConditions({ ...modalConditions, mainPageModal: true, journeyType: "oneWay" });
             }}
           >
             편도
           </button>
           <button
-            className={type === "roundTrip" && "selectedButton"}
+            className={modalConditions.journeyType === "roundTrip" && "selectedButton"}
             onClick={() => {
-              setModal(true);
-              setType("roundTrip");
+              setModalConditions({ ...modalConditions, mainPageModal: true, journeyType: "roundTrip" });
             }}
           >
             왕복
           </button>
-          {modal && (
+          {modalConditions.mainPageModal && (
             <ModalClose
               onClick={() => {
-                setModal(false);
-                setLayer(false);
+                setModalConditions({ ...modalConditions, mainPageModal: false, modalLayer: false, calendar: false });
                 dispatch(setDeparture(""));
                 dispatch(setDestination(""));
-                setOpenCalendar(false);
                 calendarReset();
               }}
             />
@@ -78,34 +62,34 @@ function BookingModal({
               departure={departure}
               destination={destination}
               onClick={() => {
-                setModal(true);
+                setModalConditions({ ...modalConditions, mainPageModal: true, modalLayer: true });
               }}
             >
               <RouteInput
                 name={departure}
-                setLayer={setLayer}
-                setOpenCalendar={setOpenCalendar}
+                modalConditions={modalConditions}
+                setModalConditions={setModalConditions}
                 calendarReset={calendarReset}
               />
-              <LocationLayer data={data} layer={layer} setLayer={setLayer} setOpenCalendar={setOpenCalendar} />
+              <LocationLayer data={data} modalConditions={modalConditions} setModalConditions={setModalConditions} />
             </SelectRoute>
             <SelectRoute>
               <RouteInput />
             </SelectRoute>
           </div>
           <div className="date">
-            {type === "oneWay" ? (
-              <TypeOneway openCalendar={openCalendar} />
+            {modalConditions.journeyType === "oneWay" ? (
+              <TypeOneway modalConditions={modalConditions} />
             ) : (
-              <TypeRoundTrip openCalendar={openCalendar} />
+              <TypeRoundTrip modalConditions={modalConditions} />
             )}
             <a href="#none" />
             <Calendar
               calendarReset={calendarReset}
               focusedInput={focusedInput}
               setFocusedInput={setFocusedInput}
-              openCalendar={openCalendar}
-              setOpenCalendar={setOpenCalendar}
+              modalConditions={modalConditions}
+              setModalConditions={setModalConditions}
             />
           </div>
           <Passenger />
@@ -122,7 +106,7 @@ export default BookingModal;
 
 const MainBooking = styled.div`
   position: absolute;
-  top: ${(props) => (props.modal ? "90px" : "580px")};
+  top: ${(props) => (props.mainPageModal ? "90px" : "580px")};
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -243,13 +227,13 @@ const ButtonWrap = styled.div`
     width: 170px;
     height: 50px;
     padding: 10px 40px;
-    border: 1px solid ${({ theme }) => theme.Color.maincolorred};
+    border: 1px solid ${({ theme }) => theme.color.mainRed};
     border-radius: 5px;
     font-size: 20px;
     text-align: center;
     line-height: 1.1;
     color: white;
-    background-color: ${({ theme }) => theme.Color.maincolorred};
+    background-color: ${({ theme }) => theme.color.mainRed};
     outline: none;
   }
 `;

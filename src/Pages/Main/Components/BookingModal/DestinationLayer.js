@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import styled from "styled-components";
 import DestinationList from "./DestinationList";
 
-function DestinationLayer({ data, setLayer, setOpenCalendar, activeID }) {
+function DestinationLayer({ data, setModalConditions, activeID }) {
   const departure = useSelector((store) => store.bookingReducer.departure);
 
   return (
@@ -11,7 +11,7 @@ function DestinationLayer({ data, setLayer, setOpenCalendar, activeID }) {
       <h3>취항지</h3>
       <div>
         {departure ? (
-          <DestinationList data={data} setLayer={setLayer} setOpenCalendar={setOpenCalendar} activeID={activeID} />
+          <DestinationList data={data} setModalConditions={setModalConditions} activeID={activeID} />
         ) : (
           <DestinationList data={data} activeID={activeID} />
         )}

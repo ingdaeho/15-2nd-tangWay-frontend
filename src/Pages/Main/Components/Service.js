@@ -63,7 +63,7 @@ const ServiceContent = styled.div`
 
   &:hover {
     position: absolute;
-    background-color: ${({ theme }) => theme.Color.maincolorred};
+    background-color: ${({ theme }) => theme.color.mainRed};
     transition: height 0.2s ease-out, top 0.2s ease-out, left 0.2s ease-out;
     p {
       color: white;

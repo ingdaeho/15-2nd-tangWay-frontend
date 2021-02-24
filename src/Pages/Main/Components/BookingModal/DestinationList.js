@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 import { setDestination, setDeparture, setDestinationID, setDepartureID } from "../../../../store/actions";
 
-function DestinationList({ data, setLayer, setOpenCalendar, activeID }) {
+function DestinationList({ data, modalConditions, setModalConditions, activeID }) {
   const dispatch = useDispatch();
   const departure = useSelector((store) => store.bookingReducer.departure);
 
@@ -20,8 +20,7 @@ function DestinationList({ data, setLayer, setOpenCalendar, activeID }) {
                   ? () => {
                       dispatch(setDestination(list.korean_name));
                       dispatch(setDestinationID(list.airport_id));
-                      setLayer(false);
-                      setOpenCalendar(true);
+                      setModalConditions({ ...modalConditions, modalLayer: false, calendar: true });
                     }
                   : () => {
                       dispatch(setDeparture(list.korean_name));
@@ -49,7 +48,7 @@ const List = styled.li`
   border-radius: 5px;
   background-color: #f2f2f2;
   font-size: 16px;
-  color: ${({ theme }) => theme.Color.fontcolorblack};
+  color: ${({ theme }) => theme.color.black};
   line-height: 40px;
   list-style-type: none;
   cursor: pointer;

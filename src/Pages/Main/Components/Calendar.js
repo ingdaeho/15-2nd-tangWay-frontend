@@ -7,7 +7,7 @@ import "moment/locale/ko";
 import { DayPickerRangeController } from "react-dates";
 import { setStartDate, setEndDate } from "../../../store/actions";
 
-function Calendar({ focusedInput, setFocusedInput, openCalendar, calendarReset, setOpenCalendar }) {
+function Calendar({ focusedInput, setFocusedInput, calendarReset, modalConditions, setModalConditions }) {
   const dispatch = useDispatch();
   const departure = useSelector((store) => store.bookingReducer.departure);
   const destination = useSelector((store) => store.bookingReducer.destination);
@@ -15,7 +15,7 @@ function Calendar({ focusedInput, setFocusedInput, openCalendar, calendarReset, 
   const endDate = useSelector((store) => store.bookingReducer.endDate);
 
   return (
-    <DateCalendar departure={departure} destination={destination} openCalendar={openCalendar}>
+    <DateCalendar departure={departure} destination={destination} modalConditions={modalConditions.calendar}>
       <CalendarHeader>
         <Section>
           구간1
@@ -62,7 +62,7 @@ function Calendar({ focusedInput, setFocusedInput, openCalendar, calendarReset, 
         </button>
         <button
           onClick={() => {
-            setOpenCalendar();
+            setModalConditions.calendar();
           }}
           className="confirm"
         >
@@ -76,7 +76,7 @@ function Calendar({ focusedInput, setFocusedInput, openCalendar, calendarReset, 
 export default Calendar;
 
 const DateCalendar = styled.section`
-  visibility: ${(props) => (props.openCalendar ? "visible" : "hidden")};
+  visibility: ${(props) => (props.modalConditions.calendar ? "visible" : "hidden")};
   position: absolute;
   top: 70px;
   right: -360px;

@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 
-function TypeRoundTrip({ openCalendar, name }) {
+function TypeRoundTrip({ modalConditions }) {
   const startDate = useSelector((store) => store.bookingReducer.startDate);
   const endDate = useSelector((store) => store.bookingReducer.endDate);
 
@@ -10,14 +10,14 @@ function TypeRoundTrip({ openCalendar, name }) {
     <>
       <DateInput
         name={startDate}
-        onClick={openCalendar}
+        onClick={modalConditions.calendar}
         placeholder={startDate?.format(`YYYY-MM-DD`) || "YYYY-MM-DD"}
         startDate={startDate}
       />
       <span>~</span>
       <DateInput
         name={endDate}
-        onClick={openCalendar}
+        onClick={modalConditions.calendar}
         placeholder={endDate?.format(`YYYY-MM-DD`) || "YYYY-MM-DD"}
         startDate={startDate}
       />

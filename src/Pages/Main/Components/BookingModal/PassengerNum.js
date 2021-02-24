@@ -58,8 +58,7 @@ function PassengerNum() {
 export default PassengerNum;
 
 const Container = styled.section`
-  display: flex;
-  align-items: center;
+  ${({ theme }) => theme.flex.center}
   justify-content: space-around;
   width: 320px;
   height: 60px;

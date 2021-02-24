@@ -79,7 +79,7 @@ const HeaderWrap = styled.section`
   }
 
   .headerInner {
-    ${({ theme }) => theme.flexSB}
+    ${({ theme }) => theme.flex.SB}
     align-items: center;
     width: 1280px;
     height: 85px;
@@ -94,7 +94,7 @@ const HeaderWrap = styled.section`
 `;
 
 const CategoryWrap = styled.ul`
-  ${({ theme }) => theme.flexSB}
+  ${({ theme }) => theme.flex.SB}
   position: relative;
   width: 820px;
   right: 30px;
